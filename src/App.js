@@ -8,7 +8,7 @@ const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://groups.yahoo.com';
 
 
 const fetchData = () => {
-  const [data, setData] = useState('');
+  const [data, setData] = useState(localStorage.sotwData || '');
 
   useEffect(() => {
     (async () => {
@@ -29,6 +29,7 @@ const fetchData = () => {
           return dom.window.document.querySelector('.msg-content').innerHTML;
         })
 
+      localStorage.sotwData = text;
       setData(text)
     })();
   }, []);
@@ -37,7 +38,6 @@ const fetchData = () => {
 }
 
 const App = () => {
-
   const data = fetchData();
 
   return (
