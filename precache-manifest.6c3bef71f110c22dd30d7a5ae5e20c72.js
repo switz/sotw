@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/sotw/static/js/2.270eef2c.chunk.js"
   },
   {
-    "revision": "3df453416b874ed100db8494996c71a4",
+    "revision": "99748cf77ba5f54bb563bca52e3aec26",
     "url": "/sotw/index.html"
   }
 ];
