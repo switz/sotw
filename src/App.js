@@ -8,10 +8,13 @@ const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://groups.yahoo.com';
 
 
 const fetchData = () => {
+  const [isLoading, setLoading] = useState(false);
   const [data, setData] = useState(localStorage.sotwData || '');
 
   useEffect(() => {
     (async () => {
+      setLoading(true);
+
       const href = await fetch(`${BASE_URL}/neo/groups/nyc_sotw/conversations/topics`)
         .then(res => res.text())
         .then(text => {
@@ -31,18 +34,19 @@ const fetchData = () => {
 
       localStorage.sotwData = text;
       setData(text)
+      setLoading(false);
     })();
   }, []);
 
-  return data;
+  return [isLoading, data];
 }
 
 const App = () => {
-  const data = fetchData();
+  const [isLoading, data] = fetchData();
 
   return (
     <div className="app">
-      <a href="">Refresh</a>
+      <a href="">Refresh</a> - Loading: {String(isLoading)}
 
       <br />
       <br />
