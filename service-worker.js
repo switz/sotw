@@ -17,6 +17,7 @@ importScripts(
   "/sotw/precache-manifest.a785146f0292262c9bc4a398844abe25.js"
 );
 
+workbox.skipWaiting();
 workbox.clientsClaim();
 
 /**
