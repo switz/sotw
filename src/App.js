@@ -42,7 +42,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <a href="/">Refresh</a>
+      <a href="">Refresh</a>
 
       <br />
       <br />
