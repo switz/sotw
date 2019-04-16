@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@blueprintjs/core": "^3.15.1",
     "gh-pages": "^2.0.1",
     "jsdom": "^14.0.0",
     "react": "^16.8.6",
