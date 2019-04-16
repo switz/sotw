@@ -10,3 +10,7 @@
 .app[data-is-loading="true"] * {
   background-color: #304048 !important;
 }
+
+pre {
+  font-family: inherit;
+}
