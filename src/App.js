@@ -136,6 +136,8 @@ const App = () => {
         {data && <p>
           All shows are sourced by Neddyo @ <a href="https://groups.yahoo.com/neo/groups/nyc_sotw/info">https://groups.yahoo.com/neo/groups/nyc_sotw/info</a>
         </p>}
+
+        <a href="">FORCE REFRESH</a>
       </div>
     </ReactPullToRefresh>
   );
