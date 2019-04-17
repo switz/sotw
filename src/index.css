@@ -7,11 +7,6 @@ body {
   color: #FFF;
 }
 
-.app * {
-  background: #30404D !important;
-  color: #FFF !important;
-}
-
 .ptr-element {
   position: absolute;
   top: 0;

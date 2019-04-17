@@ -51,12 +51,7 @@ const App = () => {
     <ReactPullToRefresh
       onRefresh={handleRefresh({ setLoading, setData })}
     >
-      <div className="app">
-        <a href="">Refresh</a> - Loading: {String(isLoading)}
-
-        <br />
-        <br />
-
+      <div className="app" data-is-loading={isLoading}>
         <Safe.div>{data}</Safe.div>
 
         {data && <p>
