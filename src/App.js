@@ -7,47 +7,49 @@ import './App.css';
 
 const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://groups.yahoo.com';
 
+const fetchData = async ({ setLoading, setData }) => {
+  setLoading(true);
 
-const fetchData = () => {
+  const href = await fetch(`${BASE_URL}/neo/groups/nyc_sotw/conversations/topics`)
+    .then(res => res.text())
+    .then(text => {
+      const dom = new JSDOM(text)
+
+      return dom.window.document.querySelector('#yg-msg-list a.yg-msg-link').href;
+    });
+
+  const text = await fetch(`${BASE_URL}${href}`)
+    .then(res => res.text())
+    .then(text => {
+      const dom = new JSDOM(text)
+
+      console.log(dom)
+      return dom.window.document.querySelector('.msg-content').innerHTML;
+    })
+
+  localStorage.sotwData = text;
+
+  setData(text)
+  setLoading(false);
+}
+
+const handleRefresh = ({ setLoading, setData }) => async (resolve) => {
+  await fetchData({ setLoading, setData });
+
+  resolve();
+}
+
+const App = () => {
   const [isLoading, setLoading] = useState(false);
   const [data, setData] = useState(localStorage.sotwData || '');
 
   useEffect(() => {
-    (async () => {
-      setLoading(true);
-
-      const href = await fetch(`${BASE_URL}/neo/groups/nyc_sotw/conversations/topics`)
-        .then(res => res.text())
-        .then(text => {
-          const dom = new JSDOM(text)
-
-          return dom.window.document.querySelector('#yg-msg-list a.yg-msg-link').href;
-        });
-
-      const text = await fetch(`${BASE_URL}${href}`)
-        .then(res => res.text())
-        .then(text => {
-          const dom = new JSDOM(text)
-
-          console.log(dom)
-          return dom.window.document.querySelector('.msg-content').innerHTML;
-        })
-
-      localStorage.sotwData = text;
-      setData(text)
-      setLoading(false);
-    })();
+    fetchData({ setLoading, setData });
   }, []);
-
-  return [isLoading, data];
-}
-
-const App = () => {
-  const [isLoading, data] = fetchData();
 
   return (
     <ReactPullToRefresh
-      onRefresh={() => window.location.reload()}
+      onRefresh={handleRefresh({ setLoading, setData })}
     >
       <div className="app">
         <a href="">Refresh</a> - Loading: {String(isLoading)}
