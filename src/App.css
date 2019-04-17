@@ -1,14 +1,14 @@
-.app * {
-  background-color: #30404D !important;
-  color: #FFF !important;
+.app {
+  background-color: #30404D;
+  color: #FFF;
 }
 
-.app * {
+.app {
   transition: background-color 700ms ease-out;
 }
 
 .app[data-is-loading="true"] * {
-  background-color: #304048 !important;
+  background-color: #304048;
 }
 
 pre {
@@ -17,6 +17,10 @@ pre {
 
 .day {
   margin: 16px 0;
+}
+
+.show:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .show {
@@ -30,4 +34,8 @@ pre {
 
 .show .metadata {
   opacity: 0.8;
+}
+
+.show[data-is-asterisked="true"] {
+  background: rgba(255, 255, 255, 0.1);
 }

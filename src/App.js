@@ -67,7 +67,7 @@ const fetchData = async ({ setLoading, setData }) => {
 
         const currentShow = {
           line,
-          isAsterisked,
+          isAsterisked: !!isAsterisked,
           band,
           metadata,
         };
