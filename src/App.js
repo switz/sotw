@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReactPullToRefresh from 'react-pull-to-refresh';
 import Safe from 'react-safe';
 import { JSDOM } from 'jsdom';
 
@@ -45,18 +46,22 @@ const App = () => {
   const [isLoading, data] = fetchData();
 
   return (
-    <div className="app">
-      <a href="">Refresh</a> - Loading: {String(isLoading)}
+    <ReactPullToRefresh
+      onRefresh={() => window.location.reload()}
+    >
+      <div className="app">
+        <a href="">Refresh</a> - Loading: {String(isLoading)}
 
-      <br />
-      <br />
+        <br />
+        <br />
 
-      <Safe.div>{data}</Safe.div>
+        <Safe.div>{data}</Safe.div>
 
-      {data && <p>
-        All shows are sourced by Neddyo @ <a href="https://groups.yahoo.com/neo/groups/nyc_sotw/info">https://groups.yahoo.com/neo/groups/nyc_sotw/info</a>
-      </p>}
-    </div>
+        {data && <p>
+          All shows are sourced by Neddyo @ <a href="https://groups.yahoo.com/neo/groups/nyc_sotw/info">https://groups.yahoo.com/neo/groups/nyc_sotw/info</a>
+        </p>}
+      </div>
+    </ReactPullToRefresh>
   );
 }
 
