@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/sotw/static/media/icons-16.3326c360.eot"
   },
   {
-    "revision": "895bc7de59413bb8029ac83cac8c9e1b",
-    "url": "/sotw/static/media/icons-16.895bc7de.woff"
-  },
-  {
     "revision": "b6382c6d9ffca4a1c50f58a17fce15a9",
     "url": "/sotw/static/media/icons-16.b6382c6d.ttf"
+  },
+  {
+    "revision": "895bc7de59413bb8029ac83cac8c9e1b",
+    "url": "/sotw/static/media/icons-16.895bc7de.woff"
   },
   {
     "revision": "e666d692a7dc07ea69886dfcec837c3c",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/sotw/static/media/icons-20.aa8f3ca0.ttf"
   },
   {
-    "revision": "d8e06b1c33dcafb8073a543ab38eb15d",
+    "revision": "7158407135b3ed8f4d698afaf27a7a60",
     "url": "/sotw/index.html"
   }
 ];
