@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import ReactPullToRefresh from 'react-pull-to-refresh';
 import he from 'he';
 import { H4 } from '@blueprintjs/core';
+import PullToRefresh from 'pulltorefreshjs';
 
 import cheerio from 'cheerio';
 
@@ -103,6 +103,15 @@ const App = () => {
   const [data, setData] = useState(initialState);
 
   useEffect(() => {
+    PullToRefresh.init({
+      mainElement: 'body',
+      async onRefresh() {
+        await fetchData({ setLoading, setData });
+
+        return Promise.resolve();
+      },
+    });
+
     fetchData({ setLoading, setData });
 
     // this so is at 2 - 4 am it still displays the shows for the previous day
@@ -115,31 +124,27 @@ const App = () => {
   }, []);
 
   return (
-    <ReactPullToRefresh
-      onRefresh={handleRefresh({ setLoading, setData })}
-    >
-      <div className="app" data-is-loading={isLoading}>
+    <div className="app" data-is-loading={isLoading}>
 
-        {data.map(day =>
-          <div key={day.line} className="day" data-date={monthDay(new Date(day.date))}>
-            <H4>{day.line} - {day.shows.length} shows</H4>
+      {data.map(day =>
+        <div key={day.line} className="day" data-date={monthDay(new Date(day.date))}>
+          <H4>{day.line} - {day.shows.length} shows</H4>
 
-            {day.shows.map(show =>
-              <div key={show.line} className="show" data-is-asterisked={show.isAsterisked}>
-                <div className="band">{show.band}</div>
-                <div className="metadata">@{show.metadata}</div>
-              </div>
-            )}
-          </div>
-        )}
+          {day.shows.map(show =>
+            <div key={show.line} className="show" data-is-asterisked={show.isAsterisked}>
+              <div className="band">{show.band}</div>
+              <div className="metadata">@{show.metadata}</div>
+            </div>
+          )}
+        </div>
+      )}
 
-        {data && <p>
-          All shows are sourced by Neddyo @ <a href="https://groups.yahoo.com/neo/groups/nyc_sotw/info">https://groups.yahoo.com/neo/groups/nyc_sotw/info</a>
-        </p>}
+      {data && <p>
+        All shows are sourced by Neddyo @ <a href="https://groups.yahoo.com/neo/groups/nyc_sotw/info">https://groups.yahoo.com/neo/groups/nyc_sotw/info</a>
+      </p>}
 
-        <a href="">FORCE REFRESH</a>
-      </div>
-    </ReactPullToRefresh>
+      <a href="">FORCE REFRESH</a>
+    </div>
   );
 }
 
