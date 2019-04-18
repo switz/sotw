@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import he from 'he';
 import PullToRefresh from 'pulltorefreshjs';
+import Sticky from 'react-stickynode';
 
 import cheerio from 'cheerio';
 
@@ -127,7 +128,9 @@ const App = () => {
 
       {data.map(day =>
         <div key={day.line} className="day" data-date={monthDay(new Date(day.date))}>
-          <div class="day-title">{day.line} {day.shows.length} shows</div>
+          <Sticky enabled={true} top={0}>
+            <div class="day-title">{day.line} {day.shows.length} shows</div>
+          </Sticky>
 
           {day.shows.map(show =>
             <div key={show.line} className="show" data-is-asterisked={show.isAsterisked}>
@@ -142,7 +145,13 @@ const App = () => {
         All shows are sourced by Neddyo @ <a href="https://groups.yahoo.com/neo/groups/nyc_sotw/info">https://groups.yahoo.com/neo/groups/nyc_sotw/info</a>
       </p>}
 
+      <br />
+      <br />
+
       <a href="">FORCE REFRESH</a>
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

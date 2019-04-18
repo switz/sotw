@@ -10,7 +10,8 @@
     "react-dom": "^16.8.6",
     "react-pull2refresh": "^1.1.4",
     "react-safe": "^1.3.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-stickynode": "^2.1.1"
   },
   "homepage": "https://saewitz.com/sotw",
   "scripts": {
