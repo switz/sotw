@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "af50ff1490312bf90ef0",
-    "url": "/sotw/static/css/main.2c747799.chunk.css"
+    "revision": "91e4d204e0a5ebc7d926",
+    "url": "/sotw/static/css/main.055273cc.chunk.css"
   },
   {
-    "revision": "af50ff1490312bf90ef0",
+    "revision": "91e4d204e0a5ebc7d926",
     "url": "/sotw/static/js/main.317bb3da.chunk.js"
   },
   {
@@ -36,15 +36,15 @@ self.__precacheManifest = [
     "url": "/sotw/static/media/icons-20.aa8f3ca0.ttf"
   },
   {
-    "revision": "058e48cbbee6cdbfb2a2e6dab347f245",
-    "url": "/sotw/static/media/icons-20.058e48cb.woff"
-  },
-  {
     "revision": "e666d692a7dc07ea69886dfcec837c3c",
     "url": "/sotw/static/media/icons-20.e666d692.eot"
   },
   {
-    "revision": "1ee9a4b025ad60516121db57a145589d",
+    "revision": "058e48cbbee6cdbfb2a2e6dab347f245",
+    "url": "/sotw/static/media/icons-20.058e48cb.woff"
+  },
+  {
+    "revision": "974ebecc9512156707e22871764e5872",
     "url": "/sotw/index.html"
   }
 ];
