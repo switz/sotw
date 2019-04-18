@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import he from 'he';
-import { H4 } from '@blueprintjs/core';
 import PullToRefresh from 'pulltorefreshjs';
 
 import cheerio from 'cheerio';
@@ -128,7 +127,7 @@ const App = () => {
 
       {data.map(day =>
         <div key={day.line} className="day" data-date={monthDay(new Date(day.date))}>
-          <H4>{day.line} {day.shows.length} shows</H4>
+          <div class="day-title">{day.line} {day.shows.length} shows</div>
 
           {day.shows.map(show =>
             <div key={show.line} className="show" data-is-asterisked={show.isAsterisked}>

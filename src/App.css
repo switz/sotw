@@ -11,8 +11,10 @@ pre {
   font-family: inherit;
 }
 
-.day {
-  margin: 16px 0;
+.day .day-title {
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .show:first-of-type {
