@@ -128,7 +128,7 @@ const App = () => {
 
       {data.map(day =>
         <div key={day.line} className="day" data-date={monthDay(new Date(day.date))}>
-          <H4>{day.line} - {day.shows.length} shows</H4>
+          <H4>{day.line} {day.shows.length} shows</H4>
 
           {day.shows.map(show =>
             <div key={show.line} className="show" data-is-asterisked={show.isAsterisked}>
