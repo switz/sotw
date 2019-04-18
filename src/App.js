@@ -128,7 +128,7 @@ const App = () => {
 
       {data.map(day =>
         <div key={day.line} className="day" data-date={monthDay(new Date(day.date))}>
-          <Sticky enabled={true} top={0}>
+          <Sticky enabled={true} top={0} innerZ={1}>
             <div class="day-title">{day.line} {day.shows.length} shows</div>
           </Sticky>
 
