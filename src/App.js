@@ -131,7 +131,7 @@ const App = () => {
 
           {day.shows.map(show =>
             <div key={show.line} className="show" data-is-asterisked={show.isAsterisked}>
-              <div className="band">{show.band}</div>
+              <div className="band">{show.isAsterisked ? '* ' : ''}{show.band}</div>
               <div className="metadata">@{show.metadata}</div>
             </div>
           )}
