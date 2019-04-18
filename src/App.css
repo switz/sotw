@@ -3,8 +3,8 @@
   color: #EBF1F5;
 }
 
-.app[data-is-loading="true"] * {
-  opacity: 0.9;
+.app[data-is-loading="true"] .show {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 pre {
