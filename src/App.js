@@ -102,6 +102,10 @@ const App = () => {
   const [isLoading, setLoading] = useState(false);
   const [data, setData] = useState(initialState);
 
+  const aDayAgo = new Date();
+
+  aDayAgo.setTime(aDayAgo.getTime() - (4*60*60*1000) - (24*60*60*1000));
+
   useEffect(() => {
     PullToRefresh.init({
       mainElement: 'body',
@@ -126,7 +130,7 @@ const App = () => {
   return (
     <div className="app" data-is-loading={isLoading}>
 
-      {data.map(day =>
+      {data.filter(day => day.date > aDayAgo).map(day =>
         <div key={day.line} className="day" data-date={monthDay(new Date(day.date))}>
           <Sticky enabled={true} top={0} innerZ={1}>
             <div class="day-title">{day.line} {day.shows.length} shows</div>
