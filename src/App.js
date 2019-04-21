@@ -31,7 +31,7 @@ const fetchData = async ({ setLoading, setData }) => {
     .then(text => {
       const $ = cheerio.load(text);
 
-      return $('.msg-content').html().replace(/<(?:\/?(span|a)).*?>/gm, '').replace(/<(?:.|\n)*?>/gm, '\n').replace(/\n+/g, '\n');
+      return $('.msg-list-container li:last-child .msg-content').html().replace(/<(?:\/?(span|a)).*?>/gm, '').replace(/<(?:.|\n)*?>/gm, '\n').replace(/\n+/g, '\n');
     })
     .then(text => he.decode(text))
     .then(text =>
@@ -62,7 +62,7 @@ const fetchData = async ({ setLoading, setData }) => {
         currentDay = { shows: [], line, date };
       }
 
-      if (/@/.test(line) && currentDay) {
+      if (/@.+/.test(line) && currentDay) {
         const [m, isAsterisked, band, metadata] = line.match(/(\*)?(.+)@(.+)/);
 
         const currentShow = {
