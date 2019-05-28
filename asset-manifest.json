@@ -1,5 +1,5 @@
 {
-  "main.css": "/sotw/static/css/main.a479d20e.chunk.css",
+  "main.css": "/sotw/static/css/main.c0e2abce.chunk.css",
   "main.js": "/sotw/static/js/main.88cd2427.chunk.js",
   "main.js.map": "/sotw/static/js/main.88cd2427.chunk.js.map",
   "runtime~main.js": "/sotw/static/js/runtime~main.bbf9da09.js",
@@ -8,9 +8,9 @@
   "static/js/2.16a3c62a.chunk.js": "/sotw/static/js/2.16a3c62a.chunk.js",
   "static/js/2.16a3c62a.chunk.js.map": "/sotw/static/js/2.16a3c62a.chunk.js.map",
   "index.html": "/sotw/index.html",
-  "precache-manifest.e9cdc97304b79ade88b82890ddc8b650.js": "/sotw/precache-manifest.e9cdc97304b79ade88b82890ddc8b650.js",
+  "precache-manifest.d37ebcb4a0bfb46ca2dcfb2f55b86c4b.js": "/sotw/precache-manifest.d37ebcb4a0bfb46ca2dcfb2f55b86c4b.js",
   "service-worker.js": "/sotw/service-worker.js",
   "static/css/2.c77d0604.chunk.css.map": "/sotw/static/css/2.c77d0604.chunk.css.map",
-  "static/css/main.a479d20e.chunk.css.map": "/sotw/static/css/main.a479d20e.chunk.css.map",
+  "static/css/main.c0e2abce.chunk.css.map": "/sotw/static/css/main.c0e2abce.chunk.css.map",
   "static/media/blueprint-icons.css": "/sotw/static/media/icons-20.e666d692.eot"
 }
