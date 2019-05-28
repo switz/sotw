@@ -11,18 +11,18 @@ pre {
 
 .day .day-title {
   padding: 2px 16px;
-  background: rgba(36, 42, 48, 1);
+  background: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.6);
 }
 
 .show {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .show ~ .show {
   border-top: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .show {
