@@ -21,10 +21,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "postinstall": "node hack-add-skipWaiting-true-to-react-script.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "postinstall": "node hack-add-skipWaiting-true-to-react-script.js",
+    "lint": "eslint src/**/*.js"
   },
   "browserslist": [
     ">0.2%",
@@ -33,6 +31,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@switz/eslint-config": "^2.0.0",
+    "eslint": "^5.16.0",
     "pulltorefreshjs": "^0.1.16",
     "replace-in-file": "^3.4.4"
   }
