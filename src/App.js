@@ -46,6 +46,8 @@ const App = () => {
 
   const aDayAgo = new Date();
 
+  console.log(data)
+
   aDayAgo.setTime(aDayAgo.getTime() - (4*60*60*1000) - (24*60*60*1000));
 
   useEffect(() => {
