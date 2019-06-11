@@ -72,7 +72,7 @@ const App = () => {
   return (
     <div className="app" data-is-loading={isLoading}>
 
-      {data.filter(day => day.date > aDayAgo).map(day =>
+      {data.filter(day => new Date(day.date) > aDayAgo).map(day =>
         <div key={day.line} className="day" data-date={monthDay(new Date(day.date))}>
           <Sticky enabled={true} top={0} innerZ={1}>
             <div className="day-title">{day.line} {day.shows.length} shows</div>
