@@ -24,6 +24,7 @@ const fetchData = async ({ setLoading, setData }) => {
 
   setData(finalStructure);
   setLoading(false);
+  localStorage.sotwData = JSON.stringify(finalStructure);
 };
 
 let initialState = [];
@@ -46,7 +47,7 @@ const App = () => {
 
   const aDayAgo = new Date();
 
-  console.log(data)
+  console.log(data);
 
   aDayAgo.setTime(aDayAgo.getTime() - (4*60*60*1000) - (24*60*60*1000));
 
