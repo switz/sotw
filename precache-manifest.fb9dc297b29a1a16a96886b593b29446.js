@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "b6382c6d9ffca4a1c50f58a17fce15a9",
-    "url": "/sotw/static/media/icons-16.b6382c6d.ttf"
+    "revision": "895bc7de59413bb8029ac83cac8c9e1b",
+    "url": "/sotw/static/media/icons-16.895bc7de.woff"
   },
   {
-    "revision": "0463ad38e353cca6ddd9",
+    "revision": "f5d9d0aef36ddc32cefb",
     "url": "/sotw/static/css/main.72a0f175.chunk.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/sotw/static/js/2.598e8669.chunk.js"
   },
   {
-    "revision": "895bc7de59413bb8029ac83cac8c9e1b",
-    "url": "/sotw/static/media/icons-16.895bc7de.woff"
+    "revision": "b6382c6d9ffca4a1c50f58a17fce15a9",
+    "url": "/sotw/static/media/icons-16.b6382c6d.ttf"
   },
   {
-    "revision": "0463ad38e353cca6ddd9",
-    "url": "/sotw/static/js/main.4fe31705.chunk.js"
+    "revision": "f5d9d0aef36ddc32cefb",
+    "url": "/sotw/static/js/main.916881ac.chunk.js"
   },
   {
     "revision": "3326c360137c2d6a6909d0c4303e502a",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/sotw/static/css/2.c77d0604.chunk.css"
   },
   {
-    "revision": "3857f62532a5bb5d1cc9b1fbbb1cee4a",
+    "revision": "361e6cdab1bd6fc9223f54a6eeb0a136",
     "url": "/sotw/index.html"
   }
 ];
