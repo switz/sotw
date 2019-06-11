@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "895bc7de59413bb8029ac83cac8c9e1b",
-    "url": "/sotw/static/media/icons-16.895bc7de.woff"
+    "revision": "b6382c6d9ffca4a1c50f58a17fce15a9",
+    "url": "/sotw/static/media/icons-16.b6382c6d.ttf"
   },
   {
-    "revision": "cb9195b7b7fdd5802f24",
+    "revision": "0463ad38e353cca6ddd9",
     "url": "/sotw/static/css/main.72a0f175.chunk.css"
   },
   {
@@ -20,20 +20,20 @@ self.__precacheManifest = [
     "url": "/sotw/static/js/2.598e8669.chunk.js"
   },
   {
+    "revision": "895bc7de59413bb8029ac83cac8c9e1b",
+    "url": "/sotw/static/media/icons-16.895bc7de.woff"
+  },
+  {
+    "revision": "0463ad38e353cca6ddd9",
+    "url": "/sotw/static/js/main.4fe31705.chunk.js"
+  },
+  {
     "revision": "3326c360137c2d6a6909d0c4303e502a",
     "url": "/sotw/static/media/icons-16.3326c360.eot"
   },
   {
-    "revision": "cb9195b7b7fdd5802f24",
-    "url": "/sotw/static/js/main.6325aa46.chunk.js"
-  },
-  {
     "revision": "e666d692a7dc07ea69886dfcec837c3c",
     "url": "/sotw/static/media/icons-20.e666d692.eot"
-  },
-  {
-    "revision": "b6382c6d9ffca4a1c50f58a17fce15a9",
-    "url": "/sotw/static/media/icons-16.b6382c6d.ttf"
   },
   {
     "revision": "aa8f3ca044cd237f87b69d0cb364887a",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/sotw/static/css/2.c77d0604.chunk.css"
   },
   {
-    "revision": "67eb1f6c140bcdf30661143e8415392c",
+    "revision": "3857f62532a5bb5d1cc9b1fbbb1cee4a",
     "url": "/sotw/index.html"
   }
 ];
