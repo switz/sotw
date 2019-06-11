@@ -31,7 +31,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@switz/eslint-config": "^2.0.0",
+    "@switz/eslint-config": "^3.0.0",
     "eslint": "^5.16.0",
     "pulltorefreshjs": "^0.1.16",
     "replace-in-file": "^3.4.4"

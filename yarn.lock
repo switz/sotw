@@ -1001,11 +1001,12 @@
     "@svgr/plugin-svgo" "^4.0.3"
     loader-utils "^1.1.0"
 
-"@switz/eslint-config@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@switz/eslint-config/-/eslint-config-2.0.0.tgz#75b10401ece7e5363bb087000bdc736dd11aa0bf"
-  integrity sha512-hkuf/SUzswP00OXsaL85C0Ceav3f2SsH+TvRVDSNzP/w15MiGxgyj63RX2ZVvRCRAeOSyLW5ODN6He79ePWYyA==
+"@switz/eslint-config@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@switz/eslint-config/-/eslint-config-3.0.0.tgz#a7f9d5b930148fcc9c4092c3f9e8df0a91069d4d"
+  integrity sha512-M4eOhIRd9zNI/nsn3aEsoWAySfoyViJxnw+Z7nL40JxZAt73Q5sRMJjCB67QPH9sZZZ16PrRCg/yO2mxa2Vajw==
   dependencies:
+    babel-eslint "^10.0.1"
     eslint-plugin-react "^7.13.0"
 
 "@types/dom4@^2.0.1":
@@ -1615,6 +1616,18 @@ babel-eslint@9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-9.0.0.tgz#7d9445f81ed9f60aff38115f838970df9f2b6220"
   integrity sha512-itv1MwE3TMbY0QtNfeL7wzak1mV47Uy+n6HtSOO4Xd7rvmO+tsGQSgyOEEgo6Y2vHZKZphaoelNeSVj4vkLA1g==
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@babel/parser" "^7.0.0"
+    "@babel/traverse" "^7.0.0"
+    "@babel/types" "^7.0.0"
+    eslint-scope "3.7.1"
+    eslint-visitor-keys "^1.0.0"
+
+babel-eslint@^10.0.1:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.0.1.tgz#919681dc099614cd7d31d45c8908695092a1faed"
+  integrity sha512-z7OT1iNV+TjOwHNLLyJk+HN+YVWX+CLE6fPD2SymJZOZQBs+QIexFjhm4keGTm8MW9xr4EC9Q0PbaLB24V5GoQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/parser" "^7.0.0"
