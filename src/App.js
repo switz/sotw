@@ -35,19 +35,11 @@ try {
   console.log('could not parse localstorage', e);
 }
 
-const handleRefresh = ({ setLoading, setData }) => async (resolve) => {
-  await fetchData({ setLoading, setData });
-
-  resolve();
-};
-
 const App = () => {
   const [isLoading, setLoading] = useState(false);
   const [data, setData] = useState(initialState);
 
   const aDayAgo = new Date();
-
-  console.log(data);
 
   aDayAgo.setTime(aDayAgo.getTime() - (4*60*60*1000) - (24*60*60*1000));
 
@@ -62,14 +54,6 @@ const App = () => {
     });
 
     fetchData({ setLoading, setData });
-
-    // this so is at 2 - 4 am it still displays the shows for the previous day
-    const fourHoursAgo = new Date();
-
-    fourHoursAgo.setTime(fourHoursAgo.getTime() - (4*60*60*1000));
-    const $el = document.querySelector(`.day[data-date="${monthDay(fourHoursAgo)}"]`);
-
-    $el && $el.scrollIntoView();
   }, []);
 
   return (
